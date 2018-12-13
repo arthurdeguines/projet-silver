@@ -23,14 +23,6 @@ public class FruitEntity {
 	private Set<CommandeEntity> commandes = new HashSet<>();
 	
 	//Ajouter un prix en fonction prix fournisseurs
-	
-	public Set<CommandeEntity> getCommandes() {
-		return commandes;
-	}
-
-	public void setCommandes(Set<CommandeEntity> commandes) {
-		this.commandes = commandes;
-	}
 
 	@Column(name = "stock")
 	private Long stock;
@@ -39,8 +31,17 @@ public class FruitEntity {
 		
 	}
 	
-	public FruitEntity(Long stock) {
+	public FruitEntity(Long stock, String nom) {
 		this.stock = stock;
+		this.nom = nom;
+	}
+	
+	public Set<CommandeEntity> getCommandes() {
+		return commandes;
+	}
+
+	public void setCommandes(Set<CommandeEntity> commandes) {
+		this.commandes = commandes;
 	}
 
 	public Long getId() {

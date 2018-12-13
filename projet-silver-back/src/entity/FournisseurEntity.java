@@ -23,6 +23,14 @@ public class FournisseurEntity {
 	
 	@Column(name = "company_name")
 	private String companyName;
+	
+	public FournisseurEntity() {
+		
+	}
+	
+	public FournisseurEntity(String companyName) {
+		this.companyName = companyName;
+	}
 
 	public Long getId() {
 		return id;

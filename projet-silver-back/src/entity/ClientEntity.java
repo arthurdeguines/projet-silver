@@ -20,14 +20,6 @@ public class ClientEntity {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "client")
 	private List<CommandeEntity> commandes;
 	
-	public List<CommandeEntity> getCommandes() {
-		return commandes;
-	}
-
-	public void setCommandes(List<CommandeEntity> commandes) {
-		this.commandes = commandes;
-	}
-
 	public ClientEntity() {
 		
 	}
@@ -36,6 +28,14 @@ public class ClientEntity {
         this.firstname = firstname;
         this.lastname = lastname;
     }
+	
+	public List<CommandeEntity> getCommandes() {
+		return commandes;
+	}
+
+	public void setCommandes(List<CommandeEntity> commandes) {
+		this.commandes = commandes;
+	}
 
     public Long getId() {
         return id;

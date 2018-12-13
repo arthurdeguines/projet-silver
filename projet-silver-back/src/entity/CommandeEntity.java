@@ -28,14 +28,6 @@ public class CommandeEntity {
 	)
 	private Set<FruitEntity> fruits = new HashSet<>();
 
-	public Set<FruitEntity> getFruits() {
-		return fruits;
-	}
-
-	public void setFruits(Set<FruitEntity> fruits) {
-		this.fruits = fruits;
-	}
-
 	public CommandeEntity() {
 		
 	}
@@ -43,6 +35,14 @@ public class CommandeEntity {
 	public CommandeEntity(ClientEntity client, String refCommande) {
 		this.client = client;
 		this.refCommande = refCommande;
+	}
+	
+	public Set<FruitEntity> getFruits() {
+		return fruits;
+	}
+
+	public void setFruits(Set<FruitEntity> fruits) {
+		this.fruits = fruits;
 	}
 	
 	public Long getId() {
