@@ -1,0 +1,13 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <select name="client" ngModel>
+    <option *ngFor="let client of clients">
+      {{ client.firstname}}
+    </option>
+  </select>
+  <br />
+  <input type="text" name="fruit" placeholder="Fruit" ngModel>
+  <br />
+  <input type="number" name="nombre" placeholder="Nombre" ngModel>
+  <br />
+  <input type="submit" value="submit">
+</form>
